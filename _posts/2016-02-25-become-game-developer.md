@@ -1,12 +1,12 @@
 ---
-layout: post
-title: Sample Post with Feature Image
-description: "Sample Post with Feature Image"
-tags: [sample post]
-image:
-    feature: feature.jpg
-    credit: dargadgetz
-    creditlink: http://www.dargadgetz.com/ios-8-abstract-wallpaper-pack-for-iphone-5s-5c-and-ipod-touch-retina/
+layout:     post
+title:      "游戏开发者之路"
+subtitle:   "\"最有意思的编程是游戏开发\""
+date:       2016-02-08 22:45:00
+author:     "Allen"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - 编程
 ---
 
 从事游戏开发近一年时间，学到很多，也知道还有很多要学。在这里做一点小小总结，一是规划自己以后的路，而是让那些想做游戏开发的后来者少走弯路。
