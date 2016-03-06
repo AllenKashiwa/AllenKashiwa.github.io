@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "UGUI动态加载对话框"
-subtitle:   "\"UI是游戏开发中不可或缺的\""
+subtitle:   ""
 date:       2016-03-06 22:45:00
 author:     "Allen"
 header-img: "img/post-bg-2015.jpg"
