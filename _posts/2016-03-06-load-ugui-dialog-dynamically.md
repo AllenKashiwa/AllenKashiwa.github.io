@@ -1,12 +1,12 @@
 ---
 layout:     post
 title:      "UGUI动态加载对话框"
-subtitle:   ""
-date:       2016-03-06 22:45:00
+subtitle:   " \"我们的征程是星辰大海\""
+date:       2016-03-06 21:09:00
 author:     "Allen"
 header-img: "img/post-bg-2015.jpg"
 tags:
-    - Unity3D
+    - 编程
 ---
 
 #UGUI动态加载对话框
