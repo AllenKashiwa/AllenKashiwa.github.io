@@ -2,7 +2,7 @@
 layout:     post
 title:      "游戏开发者之路"
 subtitle:   "\"最有意思的编程是游戏开发\""
-date:       2016-02-08 22:45:00
+date:       2016-02-25 22:45:00
 author:     "Allen"
 header-img: "img/post-bg-2015.jpg"
 tags:
@@ -34,6 +34,8 @@ tags:
 
 2.[泰课在线公开课](http://www.taikr.com/course/134)
 
+有一定编程基础，或是对2D游戏感兴趣，可以看这个泰然翻译的2D教程:[「Unity2D」使用Unity创建一个2D游戏系列](http://www.tairan.com/category/unity2d/)
+
 ## 关于shader
 
 [浅墨的shader专栏](http://blog.csdn.net/column/details/unity3d-shader.html)
@@ -48,4 +50,4 @@ tags:
 
 推荐书籍《Unity Shader and Effect Cookbook》
 
-—— Allen 丙申年正月初一 于上海
+—— Allen 丙申年正月十八 于上海
