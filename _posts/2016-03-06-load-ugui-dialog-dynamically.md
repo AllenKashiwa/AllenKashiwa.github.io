@@ -1,12 +1,12 @@
 ---
 layout:     post
 title:      "UGUI动态加载对话框"
-subtitle:   ""
+subtitle:   "\"UI是游戏开发中不可或缺的\""
 date:       2016-03-06 22:45:00
 author:     "Allen"
 header-img: "img/post-bg-2015.jpg"
 tags:
-    - 编程
+    - Unity3D
 ---
 
 #UGUI动态加载对话框
@@ -59,7 +59,7 @@ Button:
 
 在Scripts文件夹中新建C#脚本。
 LoadDialog.cs:
-{% highlight c# linenos %}
+
 using UnityEngine;
 using System.Collections;
 
@@ -86,7 +86,7 @@ public class LoadDialog : MonoBehaviour {
 		}
 	}
 }
-{% endhighlight %}
+
 
 ##3.2设置脚本
 在MainCamera中添加LoadDialog脚本。
