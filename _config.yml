@@ -1,93 +1,51 @@
-# Site settings
-title: Allen Kashiwa Blog 
-SEOTitle: 梓涵的博客 | Allen Kashiwa Blog
-header-img: img/home-bg.jpg
-email: 358804906@qq.com
-description: "关注游戏开发 Unity3D引擎使用 GamePlay开发 Shader"
-keyword: "梓涵, Allen Kashiwa, Allen, Kashiwa, 梓涵的博客,Allen Kashiwa Blog, 博客, 个人网站, Unity3D, U3D, GamePlay, 游戏逻辑, Shader, Unity Shader, 程津津, 程津津的男朋友"
-url: "http://baizihan.me"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+# Basic
+title: Allen Kashiwa Blog
+subtitle: 踏歌长行，梦想永在。
+welcome_message: 唯佳人与游戏不可辜负
+description: 专注游戏开发与设计
+creator: <a href="http://onev.cat">@onevcat</a>
 
+url: "http://www.baizihan.me"
 
+permalink: /:year/:month/:title/
 
-# SNS settings
-RSS: false
-weibo_username:     allenkashiwa
-zhihu_username:     baizihan
-github_username:    AllenKashiwa
-#twitter_username:  
-#facebook_username:  
+# Format
+highlighter: plain
 
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: blue
 
+# The blog button should not be removed.
+blog_button:
+    title: Blog
+    description: Visit blog
 
-# Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-highlighter: rouge
-permalink: pretty
+# Navigation buttons in the front page.
+nav:
+    # comment for project button
+    # - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
+    - {title: 微博, description: 我的微博, url: 'http://weibo.com/allenkashiwa'}
+    # - {title: Another Button, description: A button, url: 'http://example.com'}
+
+# Pagination
+gems: [jekyll-paginate]
 paginate: 10
-paginate_path: "page:num"
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+paginate_path: "page/:num/"
 
+# Comment
+comment:
+    # disqus: vno-jekyll
+    duoshuo: kashiwa
+    
+# Social
+social:
+    weibo: allenkashiwa
+    github: AllenKashiwa
+    # twitter: onevcat
+    # gplus: 107108267983477358170
+    mail: 358804906@qq.com
 
-
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-gems:
- - jekyll-paginate
- - jekyll-gist
- - jemoji
-
-
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
-kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-
-
-
-# Disqus settings
-#disqus_username: _your_disqus_short_name_
-
-# Duoshuo settings
-duoshuo_username: kashiwa 
-# Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
-
-
-
-
-# Analytics settings
-# Baidu Analytics
-ba_track_id: b918dfa0e886e90488bdb3c0c2598593
 # Google Analytics
-#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-#ga_domain: baizihan.me
-
-
-
-# Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "唯佳人与游戏不可辜负."
-sidebar-avatar: /img/avatar-allen.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
-
-
-# Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
-
-
-
-# Friends
-friends: [
-    {
-        title: "若念の心",
-        href: "http://3wthink.com/"
-    }
-]
-
-port: 5001
+ga:
+    # id: your_ga_id
+    # host: your_host
