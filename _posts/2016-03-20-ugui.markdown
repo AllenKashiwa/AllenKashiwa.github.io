@@ -12,7 +12,7 @@ date:       2016-03-20 14:45:00
 
 ##1.2如图设置Game窗口的Aspect为1920 x 1080
 
-![game_aspect.png](http://upload-images.jianshu.io/upload_images/1674332-f99fc1a64fd6b938.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![game_aspect.png](/assets/images/in-post/load_ugui_dialog_dynamically/game_aspect.png)
 
 ##1.3将Scene窗口调整为2D查看模式。
 
@@ -23,11 +23,11 @@ date:       2016-03-20 14:45:00
 ##2.1创建UIRoot
 如图使用菜单新建一个Panel
 
-![new_panel.png](http://upload-images.jianshu.io/upload_images/1674332-39278e06398c22ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![new_panel.png](/assets/images/in-post/load_ugui_dialog_dynamically/new_panel.png)
 
 此时会在Hierarchy自动生成一个Canvas对象及其子对象Panel，一个EventSystem对象，如图：
 
-![hierarchy.png](http://upload-images.jianshu.io/upload_images/1674332-d7fe2f3a9f2521bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![hierarchy.png](/assets/images/in-post/load_ugui_dialog_dynamically/hierarchy.png)
 
 将Canvas重命名为UIRoot，并设置其Tag为UIRoot。
 
@@ -36,26 +36,26 @@ date:       2016-03-20 14:45:00
 ###2.2.1创建对话框
 将Panel对象重命名为Dialog。如图设置将其Rect Transform的Anchor Preset设置为middle - center,将其width设置为300，height设置为150。
 
-![dialog_set.png](http://upload-images.jianshu.io/upload_images/1674332-38f45df1685d5c1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![dialog_set.png](/assets/images/in-post/load_ugui_dialog_dynamically/dialog_set.png)
 
 
 ###2.2.2创建其他组件
 如上方法使用创建UI对象菜单依次为Dialog对象添加一个Text子对象，一个Button子对象。此时Hierarchy窗口如图所示：
 
-![final_hierarchy.png](http://upload-images.jianshu.io/upload_images/1674332-1cf6f1cc042b430b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![final_hierarchy.png](/assets/images/in-post/load_ugui_dialog_dynamically/final_hierarchy.png)
 
 将Text对象及Button对象的Rect Transform设置为如图所示:
 Text:
 
-![text.png](http://upload-images.jianshu.io/upload_images/1674332-169777b98687d96e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![text.png](/assets/images/in-post/load_ugui_dialog_dynamically/text.png)
 Button:
 
-![button.png](http://upload-images.jianshu.io/upload_images/1674332-be2f16cfc8e840cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![button.png](/assets/images/in-post/load_ugui_dialog_dynamically/button.png)
 
 其中这两个对象的文字部分设置为自己喜欢的即可。
 这是完成后的Game窗口：
 
-![final_game.png](http://upload-images.jianshu.io/upload_images/1674332-ccc326faa88c66d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![final_game.png](/assets/images/in-post/load_ugui_dialog_dynamically/final_game.png)
 
 ##2.3将编辑好的UI对象存成Prefab
 将Dialog对象选中并拖动到Resources/Prefabs文件夹中，并删除Hierarchy下的Dialog对象，为动态加载做准备。

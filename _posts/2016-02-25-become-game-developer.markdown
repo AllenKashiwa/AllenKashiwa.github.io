@@ -4,12 +4,11 @@ title:      "游戏开发者之路"
 date:       2016-02-25 22:45:00
 ---
 
-从事游戏开发近一年时间，学到很多，也知道还有很多要学。在这里做一点小小总结，一是规划自己以后的路，而是让那些想做游戏开发的后来者少走弯路。
+从事游戏开发近一年时间，学到很多，也知道还有很多要学。在这里做一点小小总结，一是规划自己以后的路，二是让那些想做游戏开发的后来者少走弯路。
 
-注：本文针对游戏程序部分，游戏策划，游戏美术等内容不在本文讨论范围。
+注：本文主要针对游戏程序部分，但不限于此。
 
-如果你是喜欢看书的类型，那么clayman长期维护的这篇文章可能比较适合你：[游戏程序员养成计划](http://www.cnblogs.com/clayman/archive/2009/05/17/1459001.html)。这样你就可以不用听我废话了。下面我会推荐一些偏视频向的教程和博文。
-
+如果你是喜欢看书的类型，那么clayman长期维护的这篇文章可能比较适合你：[游戏程序员养成计划](http://www.cnblogs.com/clayman/archive/2009/05/17/1459001.html)。
 
 ## 计算机基础
 
@@ -32,8 +31,10 @@ date:       2016-02-25 22:45:00
 有一定编程基础，或是对2D游戏感兴趣，可以看这个泰然翻译的2D教程:[「Unity2D」使用Unity创建一个2D游戏系列](http://www.tairan.com/category/unity2d/)
 
 ## 关于shader
-
+CSDN上的浅墨大神有写一个专栏：
 [浅墨的shader专栏](http://blog.csdn.net/column/details/unity3d-shader.html)
+
+适合初学者了解概念的教程：
 
 [猫都能学会的Unity3D Shader入门指南（一）](http://onevcat.com/2013/07/shader-tutorial-1/)
 
@@ -41,8 +42,19 @@ date:       2016-02-25 22:45:00
 
 系列文章[【Unity Shaders】概述及Diffuse Shading介绍](http://blog.csdn.net/candycat1992/article/details/17097907)
 
-[【Unity Shaders】初探Surface Shader背后的机制](http://blog.csdn.net/candycat1992/article/details/39994049)
+推荐书籍《Unity Shader and Effect Cookbook》主要是一些step by step的例子。
 
-推荐书籍《Unity Shader and Effect Cookbook》
+## 网站推荐
 
-—— Allen 丙申年正月十八 于上海
+github上有一个unity相关资源的推荐项目，收集了一些工具，资源，项目等，推荐大家fork：
+
+[Awesome Unity](https://github.com/RyanNielson/awesome-unity)
+
+国外已经有人梳理了关于游戏开发的方方面面的知识，如果你英语没问题可以看看：
+
+[Amit’s Game Programming Information](http://www-cs-students.stanford.edu/~amitp/gameprog.html)
+
+还有一个国外不错的游戏设计与开发的教程网站，但是需要挂VPN：
+[Game Design & Development Tutorials](http://gamedevelopment.tutsplus.com/)
+
+—— Allen 最后更新于2016年9月10日
