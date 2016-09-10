@@ -1,12 +1,12 @@
 ---
 layout:     post
 title:      "Unity5.x新的AssetBundle机制01——构建"
-date:       2016-03-21 14:47:00
+date:       2016-03-19 14:47:00
 ---
 
 # 1前言
 
-![unity_cover.png](/assets/images/in-post/study_assetbundle/unity_cover.png)
+![unity_cover.png](/assets/images/in-post/unity_cover.png)
 
 Unity在5.0中推出了新的AssetBundle管理机制，本文将对此进行介绍并完成简单实践。
 
@@ -20,7 +20,7 @@ AssetBundles是一堆从你的Unity项目中导出的文件，这些文件以特
 
 开发阶段，开发者将AssetBundles上传至至服务器
 
-![](/assets/images/in-post/study_assetbundle/upload_assetbundle.jpg)
+![](/assets/images/in-post/upload_assetbundle.jpg)
 
 这就有两个阶段：
 
@@ -30,7 +30,7 @@ AssetBundles是一堆从你的Unity项目中导出的文件，这些文件以特
 ## 3.2使用
 
 程序运行阶段，客户端从服务器下载AssetBundles，并按需操作每个AssetBundle中的资源。
-![](/assets/images/in-post/study_assetbundle/download_assetbundle.jpg)
+![](/assets/images/in-post/download_assetbundle.jpg)
 
 即如下两个阶段：
 
@@ -46,17 +46,17 @@ AssetBundles是一堆从你的Unity项目中导出的文件，这些文件以特
 我们事先准备一些简单的资源：
 简单的创建两个矩形，两个球形。
 
-![create_obj.png](/assets/images/in-post/study_assetbundle/create_obj.png)
+![create_obj.png](/assets/images/in-post/create_obj.png)
 
 选中一个Cube，在Inspector视口中的下方，有一个预览窗口。在预览窗口中，我们可以新建并指定资源将被打包进的AssetBundle（默认是None，这表示该资源不被打包进任何AssetBundle，而是被打包进主工程本身），如图：
 
-![new_assetbundle.png](/assets/images/in-post/study_assetbundle/new_assetbundle.png)
+![new_assetbundle.png](/assets/images/in-post/new_assetbundle.png)
 
 图中有两个下拉框，左边的用于指定AssetBundle的名字，后边的用于指定AssetBundle Variants的名字（后文介绍）。
 
 我们新建一个名为shape/cube的AssetBundle，将两个Cube资源指定到其中。新建一个名为shape/sphere的AssetBundle，将两个Sphere资源指定其中（对应的meta文件也将被指定到该AssetBundle）。AssetBundle的命名必须小写（即便写成大写也会被转换成小写），并且支持'/'，这样可以在界面上开辟子目录。如图：
 
-![assetbundle_name.png](/assets/images/in-post/study_assetbundle/assetbundle_name.png)
+![assetbundle_name.png](/assets/images/in-post/assetbundle_name.png)
 
 如果你创建了一些没有指定任何资源的AssetBundle，**Remove Unused Names** 按钮可以将其全部清除。
 
@@ -82,11 +82,11 @@ public class BuildAssetBundle
 
 这样在菜单栏中，就会创建对应的按钮让我们执行构建操作。如图：
 
-![build_btn.png](/assets/images/in-post/study_assetbundle/build_btn.png)
+![build_btn.png](/assets/images/in-post/build_btn.png)
 
 在点击之前需要在Assets目录下创建AssetBundles文件夹。点击之后将弹出一个进度条对话框，完成后就生成了对应的AssetBundles：
 
-![assetbundles.png](/assets/images/in-post/study_assetbundle/assetbundles.png)
+![assetbundles.png](/assets/images/in-post/assetbundles.png)
 
 可以看到这些AssetBundles是按照我们此前在编辑器中新建的AssetBundle的目录结构生成的。并且有这相关的以.manifest为后缀的文件。一个manifest文件是描述了对应资源文件的循环冗余码（CRC）和资源依赖（asset dependencies）的文本文件。
 

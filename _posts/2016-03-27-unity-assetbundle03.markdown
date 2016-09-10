@@ -1,12 +1,12 @@
 ---
 layout:     post
 title:      "Unity5.x新的AssetBundle机制03——下载与使用"
-date:       2016-03-22 14:47:00
+date:       2016-03-22 10:54:00
 ---
 
 # 前言
 
-![unity_cover.png](/assets/images/in-post/study_assetbundle/unity_cover.png)
+![unity_cover.png](/assets/images/in-post/unity_cover.png)
 
 本节我们来讲讲AssetBundle的下载与使用。在第一节[Unity5.x新的AssetBundle机制01——构建](http://www.jianshu.com/p/d5d0a70c5626)中,我们已经准备好了需要的AssetBundles。本节我们就来使用这些保存好的资源。
 
@@ -125,7 +125,7 @@ public class CacheBundle : MonoBehaviour
 
 同样将该脚本拖动到MainCamera中，运行游戏，可以看到Cube2被加载进场景中。这是最终运行效果：
 
-![run_assetbundle.png](/assets/images/in-post/study_assetbundle/run_assetbundle.png)
+![run_assetbundle.png](/assets/images/in-post/run_assetbundle.png)
 
 当我们访问www对象的.assetBundle属性时，下载好的数据被解压并创建了AssetBundle对象。此时就可以加载该AssetBundle中的所有资源。
 

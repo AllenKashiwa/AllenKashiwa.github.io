@@ -1,12 +1,12 @@
 ---
 layout:     post
 title:      "Unity5.x新的AssetBundle机制02——压缩"
-date:       2016-03-22 14:47:00
+date:       2016-03-27 09:29:00
 ---
 
 ## 前言
 
-![unity_cover.png](/assets/images/in-post/study_assetbundle/unity_cover.png)
+![unity_cover.png](/assets/images/in-post/unity_cover.png)
 
 本节来讲讲Unity5新的AssetBundle机制中的压缩。
 
@@ -22,7 +22,7 @@ date:       2016-03-22 14:47:00
 相较LZMA会生成更大的压缩文件，但优点是使用时不需要整体解压。LZ4是一种基于chunk的算法，加载对象时只有相应的chunk会被解压。该格式需要unity5.3以上的版本，以前的版本并不支持。
 如果你对使用不同的压缩格式和不同的加载API对内存开销及性能的影响感兴趣，可以参考这张表：
 
-![compression_table.png](/assets/images/in-post/study_assetbundle/compression_table.png)
+![compression_table.png](/assets/images/in-post/compression_table.png)
 
 如果你不敢兴趣，那遵循以下规则好了：
 
