@@ -36,11 +36,11 @@ date:       2016-10-07 20:42:00
 
 我们仅保留动画和模型资源和一些文件结构：
 
-![image](http://baizihan.me/assets/images/in-post/assets_and_folder.png)
+![image](http://baizihan.me/assets/images/in-post/show_assets.png)
 
 ### 自动化流程
 
-我们在Editor目录下创建一个名为AnimatorFactory的CSharp文件，我们的自动化流程将一步一步通过完善这个脚本实现。
+我们在Editor目录下创建一个名为AnimatorFactory的CSharp文件，我们的自动化流程将一步一步通过完善这个脚本实现。至于为何要在Editor目录创建，可以参考我的这篇文章:[Unity3d开发中的特殊文件夹](http://baizihan.me/2016/03/unity-folders/)。
 
 #### 1 准备加载动画的工具类
 
@@ -74,6 +74,7 @@ public static class AnimatorFactoryUtil
 #### 2 创建窗口
 
 在AnimatorFactory脚本中添加如下代码：
+
 ```
 
 public class AnimatorFactory : EditorWindow
