@@ -503,6 +503,7 @@ private void BindControllerToPrefab()
 
 我们可以在指定的位置生成角色的Prefab，启用的代码展示第一次创建Prefab的情况。注释的代码展示绑定我们生成的AnimatorController到已存在的指定的Prefab上。来看看我们的成果：
 
+![image](http://baizihan.me/assets/images/in-post/product_controller.png)
 
 # 后记
 写了好长，希望对你有帮助，提升创建Prefab的效率。本文的所有演示文件都在[我的Github](https://github.com/AllenKashiwa/StudyUnity)上。下次再见。
