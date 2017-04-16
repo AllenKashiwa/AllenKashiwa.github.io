@@ -28,7 +28,7 @@ nav:
     # comment for project button
     # - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
     - {title: 微博, description: 我的微博, url: 'http://weibo.com/allenkashiwa'}
-    # - {title: Another Button, description: A button, url: 'http://example.com'}
+    - {title: 知乎, description: 我的知乎, url: 'https://www.zhihu.com/people/baizihan'}
 
 # Pagination
 gems: [jekyll-paginate]
