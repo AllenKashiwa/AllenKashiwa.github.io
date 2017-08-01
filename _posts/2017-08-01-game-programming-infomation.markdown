@@ -12,7 +12,7 @@ date:       2017-08-01 13:10:00
 
 [C++ Primer](https://book.douban.com/subject/25708312/)
 
-### 1.1.2 C#
+### 1.1.2 C\#
 
 [C# 编程指南](https://docs.microsoft.com/zh-cn/dotnet/csharp/programming-guide/index)
 
