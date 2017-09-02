@@ -1,20 +1,36 @@
 ---
 layout:     post
-title:      "设计模式总结"
+title:      "游戏开发与程序设计知识总结——设计模式"
 date:       2017-08-28 13:51:00
 ---
 
+# 更新日志
+
+每此对思维导图有改动或者在[github](https://github.com/AllenKashiwa/StudyCpp)中有了对应的实现，则增加一条更新日志。
+
+2017.9.2
+- 确定更新为系列文章并持续维护
+
 # 前言
+
+这是**游戏开发与程序设计知识总结**系列文章的第一篇[设计模式](http://baizihan.me/2017/08/design-pattern/)，下一篇是[数据结构](http://baizihan.me/2017/08/data-structure/)总结。本系列文章的初衷源于我正在找工作，所以对开发工作中用到的一些知识点想做一次完整的梳理，查缺补漏。
+
+每篇文章预计梳理某一模块的内容，每篇文章都以思维导图的形式将知识点串联起来，所有思维导图都采用[xmind](http://www.xmindchina.net/)制作。所有文章都会贴上思维导图导出的png格式的图片，并在文章中附上原文件。大家可以右键保存配图，以图片方式阅览。但是本系列文章都是长期维护的，这些图片不保证在更改思维导图后能同时配套更新，但原文件总是最新的，所以建议大家下载原文件阅览。
+
+# 设计模式
 
 设计模式是对程序设计中遇到的反复出现的问题总结出的解决方案。用好设计模式有助于我们掌握良好的代码结构，写出高内聚，松耦合的代码。但这世上没有银弹，如何使用这些设计模式，在项目中怎样选择与权衡这些模式没有一个固定的答案。鉴于此，本文对常见的设计模式进行了一次梳理，归纳总结它们各自的特点与联系，方便大家在构建自己的项目时合理挑选与使用这些模式。
 
-![设计模式](/assets/images/in-post/design_pattern/design_pattern.png)
+# 思维导图
 
-使用xmind制作，源文件在[这里](/assets/files/design_pattern.xmind)。
+全展开效果：
+
+![设计模式](http://baizihan.me/assets/images/in-post/design_pattern/design_pattern.png)
+
+[原文件下载](/assets/files/design_pattern.xmind)。
 
 # 参考
 
 [游戏编程模式](http://gpp.tkchu.me/)
 
 [维基百科-设计模式](https://zh.wikipedia.org/zh-hans/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
-
