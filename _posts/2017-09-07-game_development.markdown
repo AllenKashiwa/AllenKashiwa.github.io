@@ -37,7 +37,7 @@ A*算法
 渲染管线
 ![A*算法](http://baizihan.me/assets/images/in-post/game_develop/render_pipeline.png)
 
-[原文件下载](http://baizihan.me/assets/files/operating_system.xmind)
+[原文件下载](http://baizihan.me/assets/files/game_develop.xmind)
 
 # 参考
 
