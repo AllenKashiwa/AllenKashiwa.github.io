@@ -10,6 +10,8 @@ date:       2017-11-18 17:40:00
 
 如果你需要在自己的lua方案中添加这样的Hotfix特效，那可以考虑用这个方法。本文的目的就旨在演示说明Mono.Cecil库的一些基本用法，希望可以帮到你。
 
+本文首发于我的[个人博客](http://baizihan.me/2017/11/cecil/)，示例工程在我的[github](https://github.com/AllenKashiwa/StudyUnity)中的CecilInject。
+
 # 演示
 
 新建一个Unity项目，新建一个空场景，在Assets/Scripts目录（没有则新建一个，下文提到的目录也一样）下新建脚本Test.cs,在场景的主摄像机中挂载该脚本，内容修改如下：
