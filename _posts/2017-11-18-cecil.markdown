@@ -1,0 +1,210 @@
+---
+layout:     post
+title:      "使用Mono.Cecil实现IL代码注入"
+date:       2017-11-18 17:40:00
+---
+
+# 前言
+
+腾讯开源的Unity热更解决方案xLua有一个非常吸引人的特性就是Hotfix，其原理是使用Mono.Cecil库对进行C#层编译出来的dll程序集进行IL代码注入。其作者也在知乎的回答中简单说明了原理：[如何评价腾讯在Unity下的xLua（开源）热更方案？ - 车雄生的回答 - 知乎](https://www.zhihu.com/question/54344452/answer/139413144)
+
+如果你需要在自己的lua方案中添加这样的Hotfix特效，那可以考虑用这个方法。本文的目的就旨在演示说明Mono.Cecil库的一些基本用法，希望可以帮到你。
+
+# 演示
+
+新建一个Unity项目，新建一个空场景，在Assets/Scripts目录（没有则新建一个，下文提到的目录也一样）下新建脚本Test.cs,在场景的主摄像机中挂载该脚本，内容修改如下：
+
+```
+
+using System;
+using UnityEngine;
+
+public class TestInjectAttribute : Attribute
+{
+}
+
+public class Normal
+{
+    public static int GetMax(int a, int b)
+    {
+        Debug.LogFormat("a = {0}, b = {1}", a, b);
+        return a > b ? a : b;
+    }
+}
+
+[TestInject]
+public class Inject
+{
+    public static int GetMax(int a, int b)
+    {
+        return a;
+    } 
+}
+
+public class Test : MonoBehaviour
+{
+    void Start()
+    {
+        Debug.LogFormat("Normal Max: {0}", Normal.GetMax(6, 9));
+        Debug.LogFormat("Inject Max: {0}", Inject.GetMax(6, 9));
+    }
+}
+
+```
+
+这个文件只是简单定义了一个名为Test的MonoBehaviour；一个TestInjectAttribute；两个都实现了静态方法GetMax的类，其中Inject类赋予了TestInjectAttribute特性。运行场景，我们可以在Console窗口中得到如下结果：
+
+![image](http://baizihan.me/assets/images/in-post/cecil/console_before_inject.png)
+
+显然这里Inject类中的GetMax的实现是错误的，我们靠IL注入来修复这个错误。
+
+要使用Mono.Cecil我们首先需要将其包含到我们的项目中，在Unity的安装目录（我的在C:\Program Files\Unity\Editor\Data\Managed供参考），找到对应的程序集文件，将Mono.Cecil.dll、Mono.Cecil.Mdb.dll、Mono.Cecil.Pdb.dll其放在Assets/Plugins/Cecil目录中。你也可以选择其[开源版本](https://github.com/jbevain/cecil/releases)。
+
+在Assets/Editor目录下新建一个InjectTool.cs:
+
+```
+
+using System;
+using System.Linq;
+using UnityEditor;
+using Mono.Cecil;
+using Mono.Cecil.Cil;
+using UnityEngine;
+
+public static class InjectTool
+{
+
+    private const string AssemblyPath = "./Library/ScriptAssemblies/Assembly-CSharp.dll";
+
+    [MenuItem("Custom/Inject")]
+    public static void Inject()
+    {
+        Debug.Log("InjectTool Inject  Start");
+
+        if (Application.isPlaying || EditorApplication.isCompiling)
+        {
+            Debug.Log("You need stop play mode or wait compiling finished");
+            return;
+        }
+
+        // 按路径读取程序集
+        var readerParameters = new ReaderParameters { ReadSymbols = true };
+        var assembly = AssemblyDefinition.ReadAssembly(AssemblyPath, readerParameters);
+        if (assembly == null)
+        {
+            Debug.LogError(string.Format("InjectTool Inject Load assembly failed: {0}",
+                AssemblyPath));
+            return;
+        }
+
+        try
+        {
+            var module = assembly.MainModule;
+            foreach (var type in module.Types)
+            {
+                // 找到module中需要注入的类型
+                var needInjectAttr = typeof(TestInjectAttribute).FullName;
+                bool needInject = type.CustomAttributes.Any(typeAttribute => typeAttribute.AttributeType.FullName == needInjectAttr);
+                if (!needInject)
+                {
+                    continue;
+                }
+                // 只对公有方法进行注入
+                foreach (var method in type.Methods)
+                {
+                    if (method.IsConstructor || method.IsGetter || method.IsSetter || !method.IsPublic)
+                        continue;
+                    InjectMethod(module, method);
+                }
+            }
+            assembly.Write(AssemblyPath, new WriterParameters { WriteSymbols = true });
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError(string.Format("InjectTool Inject failed: {0}", ex));
+            throw;
+        }
+        finally
+        {
+            if (assembly.MainModule.SymbolReader != null)
+            {
+                Debug.Log("InjectTool Inject SymbolReader.Dispose Succeed");
+                assembly.MainModule.SymbolReader.Dispose();
+            }
+        }
+
+        Debug.Log("InjectTool Inject End");
+    }
+
+    private static void InjectMethod(ModuleDefinition module, MethodDefinition method)
+    {
+        // 定义稍后会用的类型
+        var objType = module.ImportReference(typeof(System.Object));
+        var intType = module.ImportReference(typeof(System.Int32));
+        var logFormatMethod =
+            module.ImportReference(typeof(Debug).GetMethod("LogFormat", new[] {typeof(string), typeof(object[])}));
+
+        // 开始注入IL代码
+        var insertPoint = method.Body.Instructions[0];
+        var ilProcessor = method.Body.GetILProcessor();
+        // 设置一些标签用于语句跳转
+        var label1 = ilProcessor.Create(OpCodes.Ldarg_1);
+        var label2 = ilProcessor.Create(OpCodes.Stloc_0);
+        var label3 = ilProcessor.Create(OpCodes.Ldloc_0);
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Nop));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Ldstr, "a = {0}, b = {1}"));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Ldc_I4_2));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Newarr, objType));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Dup));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Ldc_I4_0));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Ldarg_0));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Box, intType));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Stelem_Ref));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Dup));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Ldc_I4_1));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Ldarg_1));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Box, intType));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Stelem_Ref));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Call, logFormatMethod));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Ldarg_0));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Ldarg_1));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Ble, label1));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Ldarg_0));
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Br, label2));
+        ilProcessor.InsertBefore(insertPoint, label1);
+        ilProcessor.InsertBefore(insertPoint, label2);
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Br, label3));
+        ilProcessor.InsertBefore(insertPoint, label3);
+        ilProcessor.InsertBefore(insertPoint, ilProcessor.Create(OpCodes.Ret));
+    }
+}
+
+```
+
+这里的重点，也就是Cecil接口的使用，和IL指令的编写。接口的使用看代码就可以了。这里的IL指令怎么得到呢？我们通过ILDasm.exe工具反编译我们项目自己的程序集文件得到，即反编译/Library/ScriptAssemblies/Assembly-CSharp.dll文件。该工具在Windows SDK中能够找到，我用的是这个路径下的，供大家参考：
+
+```
+C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6 Tools\x64
+```
+
+双击运行该工具，在文件菜单栏中选择打开我们项目自己的程序集文件，找到Normal那一项，双击GetMax接口就能在一个新的窗口中看到对应的IL字节码，此时我们将其翻译为对应的Cecil接口调用就行了。
+
+Normal的GetMax方法的IL如图所示：
+
+![image](http://baizihan.me/assets/images/in-post/cecil/normal_getmax.png)
+
+可以看到我们的代码中的Opcode和这里一一对应。此时Inject的GetMax方法的IL如图所示：
+
+![image](http://baizihan.me/assets/images/in-post/cecil/inject_getmax.png)
+
+关闭ILDasm.exe，避免对dll文件的占用。现在运行项目中的Custom/Inject菜单项，然后重新运行ILDasm.exe反编译dll文件。此时Inject的GetMax方法的IL变成了下面这样：
+
+![image](http://baizihan.me/assets/images/in-post/cecil/affter_inject_getmax.png)
+
+这样一来注入就完成了，现在我们运行场景，此时Console窗口的信息如下：
+
+![image](http://baizihan.me/assets/images/in-post/cecil/console_affter_inject.png)
+
+# Hotfix
+
+如前所述，本文仅对Mono.Cecil库的使用作一下简单演示，要实现Hotfix功能，可以结合自己的Lua方案通过此方法截断CS层的方法调用即可。
