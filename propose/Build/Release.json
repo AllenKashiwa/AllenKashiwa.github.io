@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Propose",
+"dataUrl": "Release.data.unityweb",
+"asmCodeUrl": "Release.asm.code.unityweb",
+"asmMemoryUrl": "Release.asm.memory.unityweb",
+"asmFrameworkUrl": "Release.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
