@@ -126,8 +126,6 @@ date:       2017-08-01 13:10:00
 
 [【Unity Shaders】ShadowGun系列之一——飞机坠毁的浓烟效果](http://blog.csdn.net/candycat1992/article/details/41524087)
 
-[Shader Development using Unity 5 _ Full Course](https://www.bilibili.com/video/av8041418/)
-
 ## 2.2 图形编程
 
 ### 2.2.1 图形库
