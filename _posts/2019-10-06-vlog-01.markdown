@@ -2,7 +2,7 @@
 layout:     post
 title:      "灵犀的日常#01袜袜大作战"
 date:       2019-10-06 08:25:23
+video:aid=70260754&cid=121719196&page=1
 ---
 
 # 灵犀的日常
-    <iframe src="//player.bilibili.com/player.html?aid=70260754&cid=121719196&page=1" width="780" height="480" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
