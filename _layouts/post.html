@@ -13,6 +13,9 @@ layout: default
   <section class="post">
     {{ content }}
   </section>
+  {% if page.video != null %}
+    <iframe src="//player.bilibili.com/player.html?{{page.video}}" width="780" height="480" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+  {% endif %}
 </article>
 
 {% include support.html %}
