@@ -33,13 +33,6 @@ date:       2020-09-05 00:14:28
 - Voronoi split-screen（Voronoi分屏）
   - N-way Voronoi split-screen cameras（多路Voronoi分屏相机）
 
-- Construction
-  - Player- vs. split-relative
-  - View merging
-  - Feathering
-
-- Tease and a Challenge（逗乐与挑战）
-
 # 前言
 
 正式开始之前，演讲者介绍了另外两个关于提升游戏表现效果的演讲：
@@ -240,9 +233,6 @@ B站up主谜之声曾对这两个演讲做过中文介绍，推荐大家参考�
 
 - 合并进视图
 ![合并视图](http://baizihan.me/assets/images/in-post/juicing_your_camera/composite.png)
-
-
-
 
 
 最后，演讲者还列出了一些相关内容供大家参考：
