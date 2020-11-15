@@ -14,6 +14,8 @@ date:       2020-11-15 21:45:28
 
 https://medium.com/@shahriyarshahrabi/shader-studies-matrix-effect-3d2ead3a84c5
 
+本篇文章也会带你先睹为快。
+
 # 如何做到演示效果
 
 ## 2D的效果
@@ -62,7 +64,7 @@ uint triple32(uint x)
 float wang_rnd(uint seed)
 {
       uint rndint = triple32(seed);
-      return ((float)rndint) / float(0xFFFFFFFF);                                                       // 0xFFFFFFFF is max unsigned integer in hexa decimal
+      return ((float)rndint) / float(0xFFFFFFFF);  // 0xFFFFFFFF is max unsigned integer in hexa decimal
 }
 
 // Create a RenderTexture with enableRandomWrite flag and set it
@@ -248,10 +250,10 @@ fixed4 frag (v2f i) : SV_Target
 
 https://github.com/IRCSS/MatrixVFX
 
-大家可以下载玩玩。其中用到的3D模型由于github的lfs的流量原因，可能下载不了，可以在sketchup上下载obj文件：
+大家可以下载玩玩。其中用到的3D模型由于github的lfs的流量原因，可能下载不了，可以在sketchfab上下载obj文件：
 https://skfb.ly/6UoNJ
 
-注意美术资源**请勿商用**。
+注意美术资源采用CC Attribution-NonCommercial协议**请勿商用**。
 
 原作者的灵感来自于shadertoy的这个案例：https://www.shadertoy.com/view/ldccW4
 
