@@ -6,7 +6,7 @@ date:       2020-11-15 21:45:28
 
 # **效果展示**
 
-黑客帝国的数字雨特效令人映像深刻，网上已经有人在Unity中实现了类似的效果：
+黑客帝国的数字雨特效令印象深刻，网上已经有人在Unity中实现了类似的效果：
 
 ![黑客帝国](http://baizihan.me/assets/images/in-post/matrix/matrix.gif)
 
