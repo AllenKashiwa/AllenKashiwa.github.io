@@ -8,7 +8,7 @@ date:       2020-11-02 01:07:28
 
 如果你想要在自己的游戏中添加类似下图的效果，那这篇文章可能会帮到你：
 
-![破碎效果](http://baizihan.me/assets/images/in-post/destructible_walls.gif)
+![破碎效果](http://baizihan.me/assets/images/in-post/destructible_walls/shoot.gif)
 
 # 如何做到演示效果
 
