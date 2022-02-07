@@ -8,7 +8,7 @@ date:       2020-11-02 01:07:28
 
 如果你想要在自己的游戏中添加类似下图的效果，那这篇文章可能会帮到你：
 
-![破碎效果](http://baizihan.me/assets/images/in-post/destructible_walls/shoot.gif)
+![破碎效果](http://baizihan.com/assets/images/in-post/destructible_walls/shoot.gif)
 
 # 如何做到演示效果
 
@@ -57,17 +57,17 @@ public void Bake(GameObject go)
 
 为每个chunk添加RigidBody。此时各个刚体因为没有连接，会在重力的作用下坍塌。
 
-![Rigidbody](http://baizihan.me/assets/images/in-post/destructible_walls/rigidbody.png)
+![Rigidbody](http://baizihan.com/assets/images/in-post/destructible_walls/rigidbody.png)
 
-![crumbles](http://baizihan.me/assets/images/in-post/destructible_walls/crumbles.gif)
+![crumbles](http://baizihan.com/assets/images/in-post/destructible_walls/crumbles.gif)
 
 ## 3.添加固定关节
 
 找到每个chunk相邻的所有chunk，并添加fixed joints将他们连接起来，使chunk保持在自己的位置上。
 
-![Neighbours](http://baizihan.me/assets/images/in-post/destructible_walls/neighbours.png)
+![Neighbours](http://baizihan.com/assets/images/in-post/destructible_walls/neighbours.png)
 
-![Fixed Joints](http://baizihan.me/assets/images/in-post/destructible_walls/fixed_joints.png)
+![Fixed Joints](http://baizihan.com/assets/images/in-post/destructible_walls/fixed_joints.png)
 
 此时chunk虽然由于关节保持在位置上但是墙体会像果冻一样不停颤抖。
 
@@ -107,4 +107,4 @@ private void Freeze()
 
 如果你喜欢这个系列可以扫描下面的二维码关注我的公众号：
 
-![Unity与图形学](http://baizihan.me/assets/images/qrcode.jpg)
+![Unity与图形学](http://baizihan.com/assets/images/qrcode.jpg)

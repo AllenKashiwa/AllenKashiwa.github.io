@@ -47,16 +47,16 @@ B站up主谜之声曾对这两个演讲做过中文介绍，推荐大家参考�
 总的来说，相机抖动就像是盐，完全不放盐，菜就没味道，放多了呢又齁得慌。
 
 - 没内味
-![没内味](http://baizihan.me/assets/images/in-post/juicing_your_camera/boring.gif)
+![没内味](http://baizihan.com/assets/images/in-post/juicing_your_camera/boring.gif)
 
 - 太过了
-![太过了](http://baizihan.me/assets/images/in-post/juicing_your_camera/crazy.gif)
+![太过了](http://baizihan.com/assets/images/in-post/juicing_your_camera/crazy.gif)
 
 因此，我们需要相机抖动，并且能够控制抖动强度。
 
 我们用一个0~1的变量trauma来决定相机抖动的程度。在战斗时受伤或者放技能等情况下可以增加trauma值。trauma值随着时间一直**线性衰减**。相机抖动的程度就由trauma来决定，但不是直接用，而是trauma的平方值或立方值，这样相机抖动的程度变化就是一条曲线。例如当前是0.9的trauma，那相机抖动的程度就是0.9^3=0.729。
 
-- ![y=x^3](http://baizihan.me/assets/images/in-post/juicing_your_camera/y_cubed_x.png)
+- ![y=x^3](http://baizihan.com/assets/images/in-post/juicing_your_camera/y_cubed_x.png)
 
 这样取值更接近现实生活中可能会发生的视角震动，例如行驶崎岖道路的车辆由于弹簧和减震器造成的抖动。另一个好处是能让玩家感受到震动的强度是逐步升级的。
 
@@ -72,14 +72,14 @@ B站up主谜之声曾对这两个演讲做过中文介绍，推荐大家参考�
 
 - 2D
 
-![2D](http://baizihan.me/assets/images/in-post/juicing_your_camera/2dimplementation.png)
+![2D](http://baizihan.com/assets/images/in-post/juicing_your_camera/2dimplementation.png)
 
 - 3D
-![3D](http://baizihan.me/assets/images/in-post/juicing_your_camera/3dimplementation.png)
+![3D](http://baizihan.com/assets/images/in-post/juicing_your_camera/3dimplementation.png)
 
 而相比起随机，使用噪声是一种更好的方式：
 
-![使用噪声](http://baizihan.me/assets/images/in-post/juicing_your_camera/use_noise.png)
+![使用噪声](http://baizihan.com/assets/images/in-post/juicing_your_camera/use_noise.png)
 
 使用噪声的好处是：
 - 感觉抖动效果更连贯，而不是像随机那样很跳脱。
@@ -89,7 +89,7 @@ B站up主谜之声曾对这两个演讲做过中文介绍，推荐大家参考�
 
 总结一下相机抖动：
 
-![使用噪声](http://baizihan.me/assets/images/in-post/juicing_your_camera/takeaways.png)
+![使用噪声](http://baizihan.com/assets/images/in-post/juicing_your_camera/takeaways.png)
 
 
 # Smoothed motion（平滑运动）
@@ -108,7 +108,7 @@ B站up主谜之声曾对这两个演讲做过中文介绍，推荐大家参考�
 
 我们将之运用于相机的运动，让相机每帧都按一个权重，更接近我们期望的位置。如此一来，相机就会缓慢接近我们的目标位置而显得平滑优雅。而权重的大小决定了我们渐进的快慢。
 
-![渐进平均](http://baizihan.me/assets/images/in-post/juicing_your_camera/asymptotic_average.png)
+![渐进平均](http://baizihan.com/assets/images/in-post/juicing_your_camera/asymptotic_average.png)
 
 
 ## Asymmetric Asymptotic Averaging(不对称渐进平均)
@@ -171,7 +171,7 @@ B站up主谜之声曾对这两个演讲做过中文介绍，推荐大家参考�
 
 [Voronoi](https://zh.wikipedia.org/wiki/沃罗诺伊图)分屏相机仅在需要分屏时才分屏，可以有效解决浪费屏幕资源的问题。
 
-![Voronoi分屏相机](http://baizihan.me/assets/images/in-post/juicing_your_camera/voronoi_split_screen_cameras.gif)
+![Voronoi分屏相机](http://baizihan.com/assets/images/in-post/juicing_your_camera/voronoi_split_screen_cameras.gif)
 
 可以看到A和B两个玩家，在足够近的时候是共享屏幕的，只有在距离较远的时候才会分屏，并且分屏的方向是两个玩家位置决定的。
 
@@ -179,23 +179,23 @@ B站up主谜之声曾对这两个演讲做过中文介绍，推荐大家参考�
 
 - 首先判断玩家是否可以只显示在一个屏幕上
 
-![共享屏幕](http://baizihan.me/assets/images/in-post/juicing_your_camera/shared.png)
+![共享屏幕](http://baizihan.com/assets/images/in-post/juicing_your_camera/shared.png)
 
 - 如果不能共享屏幕，则计算屏幕空间Voronoi边界
 
-![计算边界](http://baizihan.me/assets/images/in-post/juicing_your_camera/cant_share.png)
+![计算边界](http://baizihan.com/assets/images/in-post/juicing_your_camera/cant_share.png)
 
 - 根据距离平衡各自的屏幕空间
-![平衡各自屏幕空间](http://baizihan.me/assets/images/in-post/juicing_your_camera/balance_private_space.png)
+![平衡各自屏幕空间](http://baizihan.com/assets/images/in-post/juicing_your_camera/balance_private_space.png)
 
 - 合并结果
   - 算法1:单独渲染，然后缝制
     - 这种方法分割和相对位置都是真实的。玩家沿分割线对称。好处是合屏时是朝着另外的玩家移动也是朝着分割线移动。坏处是玩家不在各自子屏幕的中心。
-![先渲染再缝制](http://baizihan.me/assets/images/in-post/juicing_your_camera/stitch.png)
+![先渲染再缝制](http://baizihan.com/assets/images/in-post/juicing_your_camera/stitch.png)
 
   - 算法2:以玩家为中心
     - 这种方法分割是真实的，但相对位置不是。玩家沿屏幕中心对称。好处是玩家在各自子屏幕的中心。坏处是合屏时得朝着分割线移动，而不是朝着另外的玩家移动。
-![以玩家为中心](http://baizihan.me/assets/images/in-post/juicing_your_camera/recenter.png)
+![以玩家为中心](http://baizihan.com/assets/images/in-post/juicing_your_camera/recenter.png)
 
 
 需要注意的是，平衡合并和分离之间的过渡至关重要
@@ -208,31 +208,31 @@ B站up主谜之声曾对这两个演讲做过中文介绍，推荐大家参考�
 我们已经知道双人分屏用voronoi分屏相机是怎样的了。那多人又如何分屏？
 
 - 假设有N个玩家
-![N个玩家](http://baizihan.me/assets/images/in-post/juicing_your_camera/n_players.png)
+![N个玩家](http://baizihan.com/assets/images/in-post/juicing_your_camera/n_players.png)
 
 - 获取他们的相对位置
-![相对位置](http://baizihan.me/assets/images/in-post/juicing_your_camera/relative_displacement.png)
+![相对位置](http://baizihan.com/assets/images/in-post/juicing_your_camera/relative_displacement.png)
 
 - 找到两两之间的中点和法线
-![两两分割](http://baizihan.me/assets/images/in-post/juicing_your_camera/midway_point.png)
+![两两分割](http://baizihan.com/assets/images/in-post/juicing_your_camera/midway_point.png)
 
 - 找到每对玩家划分区域的边界
-![区域边界](http://baizihan.me/assets/images/in-post/juicing_your_camera/boundary_edges.png)
+![区域边界](http://baizihan.com/assets/images/in-post/juicing_your_camera/boundary_edges.png)
 
 - 创建世界空间边界的凸包
-![创建凸包](http://baizihan.me/assets/images/in-post/juicing_your_camera/convex_hulls.png)
+![创建凸包](http://baizihan.com/assets/images/in-post/juicing_your_camera/convex_hulls.png)
 
 - 得到世界空间的voronoi区域
-![世界空间的voronoi区域](http://baizihan.me/assets/images/in-post/juicing_your_camera/world_space_voronoi_regions.png)
+![世界空间的voronoi区域](http://baizihan.com/assets/images/in-post/juicing_your_camera/world_space_voronoi_regions.png)
 
 - 用世界空间的voronoi区域决定各子屏幕上的voronoi区域的形状
-![屏幕形状由voronoi区域决定](http://baizihan.me/assets/images/in-post/juicing_your_camera/private_shape.png)
+![屏幕形状由voronoi区域决定](http://baizihan.com/assets/images/in-post/juicing_your_camera/private_shape.png)
 
 - 利用stencil分开渲染
-![分开渲染](http://baizihan.me/assets/images/in-post/juicing_your_camera/render_separately.png)
+![分开渲染](http://baizihan.com/assets/images/in-post/juicing_your_camera/render_separately.png)
 
 - 合并进视图
-![合并视图](http://baizihan.me/assets/images/in-post/juicing_your_camera/composite.png)
+![合并视图](http://baizihan.com/assets/images/in-post/juicing_your_camera/composite.png)
 
 
 最后，演讲者还列出了一些相关内容供大家参考：
@@ -243,4 +243,4 @@ B站up主谜之声曾对这两个演讲做过中文介绍，推荐大家参考�
 
 如果你喜欢这个系列可以扫描下面的二维码关注我的公众号：
 
-![Unity与图形学](http://baizihan.me/assets/images/qrcode.jpg)
+![Unity与图形学](http://baizihan.com/assets/images/qrcode.jpg)

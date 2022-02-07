@@ -6,7 +6,7 @@ date:       2017-07-18 11:30:00
 
 # 前言
 
-我相信每个开发人员都在工作中慢慢配置了一套让自己最舒适的开发环境。不管是软件还是硬件，用起来得心应手，剑随意动一直是程序员们的追求。本文想仅从软件的角度介绍下我自己开发基于Unity的游戏时的工具及配置。希望初学者可以根据此文扫清环境搭建的困惑，资深开发者可以与我交流自己的见解。本文将持续维护并优先更新于我的[github](https://github.com/AllenKashiwa/UnityEnvironment)和[博客](http://baizihan.me/)。
+我相信每个开发人员都在工作中慢慢配置了一套让自己最舒适的开发环境。不管是软件还是硬件，用起来得心应手，剑随意动一直是程序员们的追求。本文想仅从软件的角度介绍下我自己开发基于Unity的游戏时的工具及配置。希望初学者可以根据此文扫清环境搭建的困惑，资深开发者可以与我交流自己的见解。本文将持续维护并优先更新于我的[github](https://github.com/AllenKashiwa/UnityEnvironment)和[博客](http://baizihan.com/)。
 
 # 系统篇
 
@@ -14,11 +14,11 @@ date:       2017-07-18 11:30:00
 
 - （点击Windows键，输入file，）打开文件资源管理器，点击文件菜单，点击**更改文件和搜索选项**：
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/04.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/04.png)
 
 - 进入查看选项卡，显示已知文件扩展名，显示隐藏文件夹并确定：
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/05.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/05.png)
 
 
 # Unity篇
@@ -27,15 +27,15 @@ Unity在windows和mac OS上都有发布自己稳定的版本，我个人是在Wi
 
 - 前往[官网](https://unity3d.com/cn/)下载最新版本的安装助手:
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/01.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/01.png)
 
 - 选择需要的组件并选择存放地址方便重装:
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/02.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/02.png)
 
 - 点击Edit下的Preferences进入设置界面，在General选项卡中去掉Audo Refresh的勾选，在需要刷新的时候按Ctrl+r刷新
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/06.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/06.png)
 
 # Visual Studio篇
 
@@ -43,11 +43,11 @@ IDE(Integrated Development Environment 集成开发环境)的选择上，我用�
 
 - 前往[官网](https://www.visualstudio.com)下载安装助手:
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/08.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/08.png)
 
 - 打开安装助手选取需要的组件:
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/07.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/07.png)
 
 选取之后会自动添加**Visual Studio 2017 Tools for Unity**插件。
 
@@ -69,11 +69,11 @@ VS的配色方案可以在这个[studiostyl](https://studiostyl.es/)网站上找
 
 - 前往[官网](https://code.visualstudio.com/)下载本体:
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/09.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/09.png)
 
 - 打开扩展添加插件：
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/10.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/10.png)
 
 在扩展选项卡中搜索对应的插件名称，在结果中点击安装即可
 
@@ -89,7 +89,7 @@ vscode-icons（提供一套漂亮的图标）
 
 插件安装完成，我们来完善一下配置。点击菜单 文件-> 首选项-> 设置，打开用户配置。在左侧窗口中找到对应的配置项，复制到右侧窗口中编辑：
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/13.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/13.png)
 
 点击图中所示的笔，会自动复制到右边窗口。
 
@@ -136,7 +136,7 @@ vscode-icons（提供一套漂亮的图标）
 
 配色方面，在扩展里面搜索theme可以找找自己喜欢的主题：
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/11.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/11.png)
 
 
 # Git篇
@@ -145,7 +145,7 @@ vscode-icons（提供一套漂亮的图标）
 
 - 前往[官网](https://git-scm.com/)下载安装Git:
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/03.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/03.png)
 
 - 打开git bash配置用户名密码:
 ```
@@ -178,7 +178,7 @@ Everything绝对是你提高开发效率的利器。秒搜文件的感觉非常�
 - 前往[官网](https://www.voidtools.com/)下载最新的Everything
 - 点击Tools-> Options菜单，设置调出快捷键并开机自启动：
 
-![image](http://baizihan.me/assets/images/in-post/unity_environment/12.png)
+![image](http://baizihan.com/assets/images/in-post/unity_environment/12.png)
 
 # 有道云笔记篇
 

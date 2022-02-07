@@ -10,7 +10,7 @@ date:       2017-02-26 18:30:00
 
 在实际操作过程中，我们的脚本上需要配置的部分可能常常需要指定一些固定的组件。加入有这样的一个脚本：
 
-![image](http://baizihan.me/assets/images/in-post/asset_helper/example.png)
+![image](http://baizihan.com/assets/images/in-post/asset_helper/example.png)
 
 像这样，rigBody和capsuleCollider如果在游戏运行时获取会有些消耗，而在Editor模式下又需要我们每次从Hierarchy面板拖动到Aspector面板来指定费时费力。而这一切我们可以通过脚本自动完成。我们在Monster脚本上添加如下接口：
 

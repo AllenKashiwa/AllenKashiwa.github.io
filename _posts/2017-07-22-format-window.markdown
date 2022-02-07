@@ -14,7 +14,7 @@ date:       2017-07-22 14:50:00
 
 Unity编辑器本身是很容易扩展的，我写了这样子的一个小工具来帮助我统一编码和换行符还有到底是用空哥还是制表符来当缩进的千古难题：
 
-![image](http://baizihan.me/assets/images/in-post/format_window/01.png)
+![image](http://baizihan.com/assets/images/in-post/format_window/01.png)
 
 而这样的一个工具核心功能的实现也很简单：
 

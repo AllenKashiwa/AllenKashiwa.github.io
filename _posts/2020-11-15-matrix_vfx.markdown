@@ -8,7 +8,7 @@ date:       2020-11-15 21:45:28
 
 黑客帝国的数字雨特效令印象深刻，网上已经有人在Unity中实现了类似的效果：
 
-![黑客帝国](http://baizihan.me/assets/images/in-post/matrix/matrix.gif)
+![黑客帝国](http://baizihan.com/assets/images/in-post/matrix/matrix.gif)
 
 作者还有相应的博文介绍他的做法，大家可以去围观：
 
@@ -22,7 +22,7 @@ https://medium.com/@shahriyarshahrabi/shader-studies-matrix-effect-3d2ead3a84c5
 
 我们先实现一个小目标，在2D下实现如下的效果：
 
-![2D效果](http://baizihan.me/assets/images/in-post/matrix/2d_case.gif)
+![2D效果](http://baizihan.com/assets/images/in-post/matrix/2d_case.gif)
 
 这个2D的效果主要由两部分组成，一是随机变化的文字，二是如同下雨一样的矩形列。
 
@@ -32,7 +32,7 @@ https://medium.com/@shahriyarshahrabi/shader-studies-matrix-effect-3d2ead3a84c5
 
 准备一张1024 x 1024大小的文字贴图，r通道包含了将要用于随机显示的16行 x 16列的文字信息：
 
-![字体贴图](http://baizihan.me/assets/images/in-post/matrix/font_texture.png)
+![字体贴图](http://baizihan.com/assets/images/in-post/matrix/font_texture.png)
 
 我们使用compute shader生成一张白噪声RT来达到随机的目的：
 
@@ -89,7 +89,7 @@ void Generate_White_Noise(uint3 id : SV_DispatchThreadID)
 
 我们每隔一段时间就改变一次随机数种子来输出变化的白噪声贴图:
 
-![白噪声](http://baizihan.me/assets/images/in-post/matrix/white_noise.gif)
+![白噪声](http://baizihan.com/assets/images/in-post/matrix/white_noise.gif)
 
 随后我们在绘制屏幕时使用白噪声贴图来采样我们的文本贴图：
 
@@ -171,7 +171,7 @@ Shader "Unlit/ScreenSpaceMatrixEffect"
 
 最后得到文本随机变化的效果：
 
-![文本变化](http://baizihan.me/assets/images/in-post/matrix/only_text.gif)
+![文本变化](http://baizihan.com/assets/images/in-post/matrix/only_text.gif)
 
 ### 下雨的矩形列
 
@@ -200,7 +200,7 @@ fixed4 frag (v2f i) : SV_Target
 
 雨的效果比较简单，就是自上而下颜色越来越亮，再水平分列，给每一列不同的偏移和速度就行了。这是只有雨柱的效果：
 
-![雨柱效果](http://baizihan.me/assets/images/in-post/matrix/only_rain.gif)
+![雨柱效果](http://baizihan.com/assets/images/in-post/matrix/only_rain.gif)
 
 最后我们把文本变化和雨柱效果相乘，就是2D的数字雨效果了。
 
@@ -267,4 +267,4 @@ https://www.ronja-tutorials.com/2018/05/11/triplanar-mapping.html
 
 如果你喜欢这个系列可以扫描下面的二维码关注我的公众号：
 
-![Unity与图形学](http://baizihan.me/assets/images/qrcode.jpg)
+![Unity与图形学](http://baizihan.com/assets/images/qrcode.jpg)

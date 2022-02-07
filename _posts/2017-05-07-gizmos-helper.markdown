@@ -8,7 +8,7 @@ date:       2017-05-07 18:30:00
 
 游戏中经常需要做范围判定，常见的方式是进行物理上的碰撞检测。在Unity引擎中提供了各种类型的Collider和碰撞检测接口。其中，Collider可以在Scene窗口中看到绿色线标识的范围。例如，CapsuleCollider：
 
-![CapsuleCollider](http://baizihan.me/assets/images/in-post/gizmos_helper/capsule_collider.png)
+![CapsuleCollider](http://baizihan.com/assets/images/in-post/gizmos_helper/capsule_collider.png)
 
 这样的范围标识能带来直观的感受。但是在开发过程中，范围判定不一定全是通过Collider来做检测，并且挂载Collider的物体极有可能在我们需要看到显示范围时已经被销毁。所以，我们有必要做一个能画出各种几何图形的工具。Unity中提供的GizmosDraw的功能可以实现这样一个工具。
 
@@ -16,15 +16,15 @@ date:       2017-05-07 18:30:00
 
 我们的工具要能做到以下效果：
 
-![GizmosResult](http://baizihan.me/assets/images/in-post/gizmos_helper/gizmos_result.png)
+![GizmosResult](http://baizihan.com/assets/images/in-post/gizmos_helper/gizmos_result.png)
 
 从图中可以看出，GameObjective和GizmosDraw出的范围有出入，这是模拟Collider会随着设置的Scale，Radius，Center等值而产生偏差。而我们的工具需要保证在参数设置相同的情况下，Gizmos的结果和碰撞器的真实范围一致。
 
-![矩形](http://baizihan.me/assets/images/in-post/gizmos_helper/cube_inspector.png)
+![矩形](http://baizihan.com/assets/images/in-post/gizmos_helper/cube_inspector.png)
 
-![球形](http://baizihan.me/assets/images/in-post/gizmos_helper/sphere_inspector.png)
+![球形](http://baizihan.com/assets/images/in-post/gizmos_helper/sphere_inspector.png)
 
-![胶囊体](http://baizihan.me/assets/images/in-post/gizmos_helper/capsule_inspector.png)
+![胶囊体](http://baizihan.com/assets/images/in-post/gizmos_helper/capsule_inspector.png)
 
 # 代码
 

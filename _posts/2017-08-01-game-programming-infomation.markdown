@@ -5,7 +5,7 @@ date:       2017-08-01 13:10:00
 ---
 
 # 0
-本文首发于[我的github](https://github.com/AllenKashiwa/ProgrammingInformation)和[我的博客](http://baizihan.me/2017/08/game-programming-infomation/)，欢迎大家与我交流。
+本文首发于[我的github](https://github.com/AllenKashiwa/ProgrammingInformation)和[我的博客](http://baizihan.com/2017/08/game-programming-infomation/)，欢迎大家与我交流。
 
 # 1 基础知识与通用技能
 
@@ -62,7 +62,7 @@ date:       2017-08-01 13:10:00
 
 ## 1.3 工具
 
-[打造舒适的Unity开发环境](http://baizihan.me/2017/07/unity-environment/)
+[打造舒适的Unity开发环境](http://baizihan.com/2017/07/unity-environment/)
 
 [git工作流](https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md)
 

@@ -10,15 +10,15 @@ date:       2016-10-30 20:30:00
 
 具体的形式如这样的：
 
-![image](http://baizihan.me/assets/images/in-post/circle_indicator.png)
+![image](http://baizihan.com/assets/images/in-post/circle_indicator.png)
 
 这样的：
 
-![image](http://baizihan.me/assets/images/in-post/arrow_indicator.png)
+![image](http://baizihan.com/assets/images/in-post/arrow_indicator.png)
 
 还有这样的：
 
-![image](http://baizihan.me/assets/images/in-post/sector_indicator.png)
+![image](http://baizihan.com/assets/images/in-post/sector_indicator.png)
 
 **矩形**（箭头也算是矩形的）和**圆形**比较好弄，可以绘制好贴图用一个面片搞定。大小通过缩放面片实现。麻烦的是**扇形**。因为技能肯定不单一，扇形的角度就会有变化。不可能每种角度的扇形都做个特效，这样游戏资源会变多而且策划不能随意调整角度。所以，这个时候程序员们就得解决这个问题，让这样的范围指示器自动生成，避免繁重的美术制作。
 
@@ -28,7 +28,7 @@ date:       2016-10-30 20:30:00
 
 先来看看最终的效果：
 
-![image](http://baizihan.me/assets/images/in-post/my_own_indicator.png)
+![image](http://baizihan.com/assets/images/in-post/my_own_indicator.png)
 
 从左到右分别是纯色版，带透明度渐变版和实用贴图版。
 

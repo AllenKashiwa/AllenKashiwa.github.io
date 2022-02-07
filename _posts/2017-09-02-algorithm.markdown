@@ -14,7 +14,7 @@ date:       2017-09-02 21:19:00
 
 # 前言
 
-这这是**游戏开发与程序设计知识总结**系列文章的第三篇[算法](http://baizihan.me/2017/09/algorithm/)，下一篇是[操作系统](http://baizihan.me/2017/09/operating_system/)。本系列文章的初衷源于我正在找工作，所以对开发工作中用到的一些知识点想做一次完整的梳理，查缺补漏。是**游戏开发与程序设计知识总结**系列文章的第三篇[算法](http://baizihan.me/2017/09/algorithm/)，预计下一篇是GamePlay。本系列文章的初衷源于我正在找工作，所以对开发工作中用到的一些知识点想做一次完整的梳理，查缺补漏。
+这这是**游戏开发与程序设计知识总结**系列文章的第三篇[算法](http://baizihan.com/2017/09/algorithm/)，下一篇是[操作系统](http://baizihan.com/2017/09/operating_system/)。本系列文章的初衷源于我正在找工作，所以对开发工作中用到的一些知识点想做一次完整的梳理，查缺补漏。是**游戏开发与程序设计知识总结**系列文章的第三篇[算法](http://baizihan.com/2017/09/algorithm/)，预计下一篇是GamePlay。本系列文章的初衷源于我正在找工作，所以对开发工作中用到的一些知识点想做一次完整的梳理，查缺补漏。
 
 每篇文章预计梳理某一模块的内容，每篇文章都以思维导图的形式将知识点串联起来，所有思维导图都采用[xmind](http://www.xmindchina.net/)制作。所有文章都会贴上思维导图导出的png格式的图片，并在文章中附上原文件。大家可以右键保存配图，以图片方式阅览。但是本系列文章都是长期维护的，这些图片不保证在更改思维导图后能同时配套更新，但原文件总是最新的，所以建议大家下载原文件阅览。
 
@@ -25,12 +25,12 @@ date:       2017-09-02 21:19:00
 # 思维导图
 
 未展开效果
-![image](http://baizihan.me/assets/images/in-post/algorithm/algorithm.png)
+![image](http://baizihan.com/assets/images/in-post/algorithm/algorithm.png)
 
 全展开效果
-![image](http://baizihan.me/assets/images/in-post/algorithm/algorithm_all.png)
+![image](http://baizihan.com/assets/images/in-post/algorithm/algorithm_all.png)
 
-[原文件下载](http://baizihan.me/assets/files/algorithm.xmind)
+[原文件下载](http://baizihan.com/assets/files/algorithm.xmind)
 
 # 动画演示
 在整理的过程中有不少通过动画演示算法的例子，比如维基百科的配图。

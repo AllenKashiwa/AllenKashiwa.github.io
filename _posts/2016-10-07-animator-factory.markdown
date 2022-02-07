@@ -24,23 +24,23 @@ date:       2016-10-07 20:42:00
 
 找到Unity旧版本：
 
-![image](http://baizihan.me/assets/images/in-post/old_unity.png)
+![image](http://baizihan.com/assets/images/in-post/old_unity.png)
 
 找到对应版本的标准资源
 
-![image](http://baizihan.me/assets/images/in-post/standard_assets.png)
+![image](http://baizihan.com/assets/images/in-post/standard_assets.png)
 
 我们创建新的项目，并导入资源：
 
-![image](http://baizihan.me/assets/images/in-post/import_package.png)
+![image](http://baizihan.com/assets/images/in-post/import_package.png)
 
 我们仅保留动画和模型资源和一些文件结构：
 
-![image](http://baizihan.me/assets/images/in-post/show_assets.png)
+![image](http://baizihan.com/assets/images/in-post/show_assets.png)
 
 ### 自动化流程
 
-我们在Editor目录下创建一个名为AnimatorFactory的CSharp文件，我们的自动化流程将一步一步通过完善这个脚本实现。至于为何要在Editor目录创建，可以参考我的这篇文章:[Unity3d开发中的特殊文件夹](http://baizihan.me/2016/03/unity-folders/)。
+我们在Editor目录下创建一个名为AnimatorFactory的CSharp文件，我们的自动化流程将一步一步通过完善这个脚本实现。至于为何要在Editor目录创建，可以参考我的这篇文章:[Unity3d开发中的特殊文件夹](http://baizihan.com/2016/03/unity-folders/)。
 
 #### 1 准备加载动画的工具类
 
@@ -130,7 +130,7 @@ public class AnimatorFactory : EditorWindow
 
 这样在Window菜单栏下就会有一个AnimatorFactory的菜单项，点击会打开这样一个窗口：
 
-![image](http://baizihan.me/assets/images/in-post/animator_factory_window.png)
+![image](http://baizihan.com/assets/images/in-post/animator_factory_window.png)
 
 EditorWindow可以用来扩展我们的Unity，开发一些我们自己需要的工具，更多相关信息可以参考Unity的官方文档：
 https://docs.unity3d.com/Manual/ExtendingTheEditor.html
@@ -503,7 +503,7 @@ private void BindControllerToPrefab()
 
 我们可以在指定的位置生成角色的Prefab，启用的代码展示第一次创建Prefab的情况。注释的代码展示绑定我们生成的AnimatorController到已存在的指定的Prefab上。来看看我们的成果：
 
-![image](http://baizihan.me/assets/images/in-post/product_controller.png)
+![image](http://baizihan.com/assets/images/in-post/product_controller.png)
 
 # 后记
 写了好长，希望对你有帮助，提升创建Prefab的效率。本文的所有演示文件都在[我的Github](https://github.com/AllenKashiwa/StudyUnity)上。下次再见。

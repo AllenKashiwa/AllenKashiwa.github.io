@@ -8,7 +8,7 @@ date:       2017-10-02 22:40:00
 
 程序员或多或少都会在命令行下面工作。我个人比较常使用命令行，特别是使用git做版本管理的时候。并且开发人员一般对自己的文件会有条理的组织。比如我会在某个盘符下创建一个WorkSpace文件夹放置我几乎所有的工作相关的文件。这时到达工作路径需要至少两条指令：
 
-![image](http://baizihan.me/assets/images/in-post/subst/change_driver.png)
+![image](http://baizihan.com/assets/images/in-post/subst/change_driver.png)
 
 如果d盘下有同意以"W"开头的其他文件夹，那我们还需要多打几个字母才能跳转到工作间，而使用subst指令可以让这个过程更简单，这是我最近知道的。
 
@@ -16,12 +16,12 @@ date:       2017-10-02 22:40:00
 
 DOS下的subst指令可以将路径与驱动器号关联，我们通过/?参数来看看这条命令的用法：
 
-![image](http://baizihan.me/assets/images/in-post/subst/subst_help.png)
+![image](http://baizihan.com/assets/images/in-post/subst/subst_help.png)
 
 我用w:盘符来代表我的工作间：
 
-![image](http://baizihan.me/assets/images/in-post/subst/subst_set.png)
+![image](http://baizihan.com/assets/images/in-post/subst/subst_set.png)
 
 此后，我跳转工作间就十分简单也不容易出错了：
 
-![image](http://baizihan.me/assets/images/in-post/subst/subst_use.png)
+![image](http://baizihan.com/assets/images/in-post/subst/subst_use.png)

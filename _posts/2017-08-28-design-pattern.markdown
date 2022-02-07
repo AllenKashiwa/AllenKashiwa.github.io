@@ -15,7 +15,7 @@ date:       2017-08-28 13:51:00
 
 # 前言
 
-这是**游戏开发与程序设计知识总结**系列文章的第一篇[设计模式](http://baizihan.me/2017/08/design-pattern/)，下一篇是[数据结构](http://baizihan.me/2017/08/data-structure/)总结。本系列文章的初衷源于我正在找工作，所以对开发工作中用到的一些知识点想做一次完整的梳理，查缺补漏。
+这是**游戏开发与程序设计知识总结**系列文章的第一篇[设计模式](http://baizihan.com/2017/08/design-pattern/)，下一篇是[数据结构](http://baizihan.com/2017/08/data-structure/)总结。本系列文章的初衷源于我正在找工作，所以对开发工作中用到的一些知识点想做一次完整的梳理，查缺补漏。
 
 每篇文章预计梳理某一模块的内容，每篇文章都以思维导图的形式将知识点串联起来，所有思维导图都采用[xmind](http://www.xmindchina.net/)制作。所有文章都会贴上思维导图导出的png格式的图片，并在文章中附上原文件。大家可以右键保存配图，以图片方式阅览。但是本系列文章都是长期维护的，这些图片不保证在更改思维导图后能同时配套更新，但原文件总是最新的，所以建议大家下载原文件阅览。
 
@@ -27,7 +27,7 @@ date:       2017-08-28 13:51:00
 
 全展开效果：
 
-![设计模式](http://baizihan.me/assets/images/in-post/design_pattern/design_pattern.png)
+![设计模式](http://baizihan.com/assets/images/in-post/design_pattern/design_pattern.png)
 
 [原文件下载](/assets/files/design_pattern.xmind)。
 

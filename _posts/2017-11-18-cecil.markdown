@@ -10,7 +10,7 @@ date:       2017-11-18 17:40:00
 
 如果你需要在自己的lua方案中添加这样的Hotfix特效，那可以考虑用这个方法。本文的目的就旨在演示说明Mono.Cecil库的一些基本用法，希望可以帮到你。
 
-本文首发于我的[个人博客](http://baizihan.me/2017/11/cecil/)，示例工程在我的[github](https://github.com/AllenKashiwa/StudyUnity)中的CecilInject。
+本文首发于我的[个人博客](http://baizihan.com/2017/11/cecil/)，示例工程在我的[github](https://github.com/AllenKashiwa/StudyUnity)中的CecilInject。
 
 # 演示
 
@@ -56,7 +56,7 @@ public class Test : MonoBehaviour
 
 这个文件只是简单定义了一个名为Test的MonoBehaviour；一个TestInjectAttribute；两个都实现了静态方法GetMax的类，其中Inject类赋予了TestInjectAttribute特性。运行场景，我们可以在Console窗口中得到如下结果：
 
-![image](http://baizihan.me/assets/images/in-post/cecil/console_before_inject.png)
+![image](http://baizihan.com/assets/images/in-post/cecil/console_before_inject.png)
 
 显然这里Inject类中的GetMax的实现是错误的，我们靠IL注入来修复这个错误。
 
@@ -193,19 +193,19 @@ C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6 Tools\x64
 
 Normal的GetMax方法的IL如图所示：
 
-![image](http://baizihan.me/assets/images/in-post/cecil/normal_getmax.png)
+![image](http://baizihan.com/assets/images/in-post/cecil/normal_getmax.png)
 
 可以看到我们的代码中的Opcode和这里一一对应。此时Inject的GetMax方法的IL如图所示：
 
-![image](http://baizihan.me/assets/images/in-post/cecil/inject_getmax.png)
+![image](http://baizihan.com/assets/images/in-post/cecil/inject_getmax.png)
 
 关闭ILDasm.exe，避免对dll文件的占用。现在运行项目中的Custom/Inject菜单项，然后重新运行ILDasm.exe反编译dll文件。此时Inject的GetMax方法的IL变成了下面这样：
 
-![image](http://baizihan.me/assets/images/in-post/cecil/affter_inject_getmax.png)
+![image](http://baizihan.com/assets/images/in-post/cecil/affter_inject_getmax.png)
 
 这样一来注入就完成了，现在我们运行场景，此时Console窗口的信息如下：
 
-![image](http://baizihan.me/assets/images/in-post/cecil/console_affter_inject.png)
+![image](http://baizihan.com/assets/images/in-post/cecil/console_affter_inject.png)
 
 # Hotfix
 

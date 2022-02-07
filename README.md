@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-See [Vno - Jekyll](http://vno.onevcat.com) site and [my blog](http://baizihan.me).
+See [Vno - Jekyll](http://vno.onevcat.com) site and [my blog](http://baizihan.com).
 
 ## Licence
 

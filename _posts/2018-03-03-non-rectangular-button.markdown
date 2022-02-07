@@ -8,7 +8,7 @@ date:       2018-03-03 23:15:00
 
 UGUI中的按钮默认是矩形的，若要实现非矩形按钮该怎么做呢？比如这样的按钮：
 
-![image](http://baizihan.me/assets/images/in-post/non_rectangular_button/non_rect_button.png)
+![image](http://baizihan.com/assets/images/in-post/non_rectangular_button/non_rect_button.png)
 
 本文将介绍两种实现方式供大家选择。
 
@@ -156,13 +156,13 @@ public class NonRectAngularButtonImageHelper
 
 还额外写了一个自动添加组件和设置raycastTarget属性的菜单项。创建完一个普通的按钮后，右键执行命令：
 
-![image](http://baizihan.me/assets/images/in-post/non_rectangular_button/cmd.png)
+![image](http://baizihan.com/assets/images/in-post/non_rectangular_button/cmd.png)
 
 这将自动创建一个名为“NonRectangularButtonImage”的子节点，并添加一个同名的脚本组件和一个PolygonCollider2D组件。编辑PolygonCollider2D组件即可设置按钮的点击区域，调整起来也十分方便，既简单又节省内存。
 
 [我的Github](https://github.com/AllenKashiwa/StudyUnity/tree/master/NonRectangularButton)中这两种方式都有实现，供大家参考：
 
-![image](http://baizihan.me/assets/images/in-post/non_rectangular_button/project_result.png)
+![image](http://baizihan.com/assets/images/in-post/non_rectangular_button/project_result.png)
 
 共三组按钮，点击后可以在Console窗口中看到响应Log。
 
